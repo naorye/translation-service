@@ -1,0 +1,22 @@
+{
+    "level1": {
+        "level2": {
+            "level3": {
+                "level4": {
+                    "result": "level 4 success"
+                },
+                "result": "level 3 success"
+            },
+            "result": "level 2 success"
+        },
+        "result": "level 1 success",
+        "interpolationTest": "My name is {{name}} and my age is {{age}}",
+        "pluralizationTest": {
+            "zero": "No items",
+            "many": "There are {{count}} items",
+            "1": "Only one item",
+            "39": "Exactly 39 items"
+        }
+    },
+    "result": "level 0 success"
+}
