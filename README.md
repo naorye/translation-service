@@ -12,7 +12,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
 
 ## Usage
 
-1. Define your translation files.   
+1. Define your translation files.
     ```
     {
         "messages": {
