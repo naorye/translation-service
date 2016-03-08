@@ -13,7 +13,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
 ## Usage
 
 1. Define your translation files.
-    ```
+    ```json
     {
         "messages": {
             "writtenBy": "Commenter: {{name}}",
@@ -37,7 +37,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
     }
     ```
 2. Create an instance of `TranslationService` for your application.
-    ```
+    ```js
     import TranslationService from 'translation-service';
     import enTranslationObject from './en.json';
     ...
@@ -56,7 +56,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
     export default translationService;
     ```
 3. Use it.
-    ```
+    ```js
     import translation from 'translation';
 
     var text = translation.translate('messages.writtenBy', { name: 'Charles Dickens' });
