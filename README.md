@@ -13,8 +13,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
 ## Usage
 
 1. Define your translation files.
-    <pre><code>
-    {
+    <pre><code>{
         "messages": {
             "writtenBy": "Commenter: {{name}}",
             "messagesCount": {
