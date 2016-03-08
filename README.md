@@ -13,7 +13,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
 ## Usage
 
 1. Define your translation files.
-    ```javascript
+    <pre><code>
     {
         "messages": {
             "writtenBy": "Commenter: {{name}}",
@@ -35,7 +35,7 @@ More information can be found here: <a href="http://www.webdeveasy.com/building-
             }
         }
     }
-    ```
+    </pre></code>
 2. Create an instance of `TranslationService` for your application.
     ```javascript
     import TranslationService from 'translation-service';
