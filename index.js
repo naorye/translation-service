@@ -72,7 +72,7 @@ class TranslationService {
         });
     }
 
-    translate(key, interpolation = {}, pluralValue = undefined) {
+    translate(key, interpolation = undefined, pluralValue = undefined) {
         var tokens = key.split('.');
         var value = this.translationsDictionary[this.currentLanguage];
         for (let i = 0; i < tokens.length && value !== undefined; i++) {
