@@ -74,6 +74,33 @@ describe('translation-service', function() {
         ]);
     });
 
+    it('should not change the current language since it is the same', function() {
+        translationService = new TranslationService('en', en);
+
+        changeSpy = spy();
+        translationService.onChange(changeSpy);
+
+        promise = translationService.setLanguage('en', en);
+
+        return Promise.all([
+            expect(promise).eventually.fulfilled,
+            promise.then(() => {
+                assert(changeSpy.notCalled, 'Change event fired');
+            })
+        ]);
+    });
+
+    it('should not change the current language when no language and reject', function() {
+        translationService = new TranslationService('en', en);
+
+
+        promise = translationService.setLanguage();
+
+        return Promise.all([
+            expect(promise).eventually.rejectedWith('setLanguage: language is mandatory')
+        ]);
+    });
+
     it('should not change the current language when no translation object and reject', function() {
         translationService = new TranslationService('en', en);
 

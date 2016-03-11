@@ -20,8 +20,10 @@ class TranslationService {
         }
         return new Promise((resolve, reject) => {
             // Now, only language is required
-            if (language && this.currentLanguage !== language) {
-                if (translationObject) {
+            if (language) {
+                if (this.currentLanguage === language) {
+                    resolve();
+                } else if (translationObject) {
                     this.applyLanguage(language, translationObject);
                     resolve();
                 } else {
@@ -34,6 +36,8 @@ class TranslationService {
                             (reason) => reject(reason)
                         );
                 }
+            } else {
+                reject('setLanguage: language is mandatory');
             }
         });
     }
