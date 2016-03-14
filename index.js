@@ -45,7 +45,7 @@ class TranslationService {
     applyLanguage(language, translationObject) {
         this.currentLanguage = language;
         this.translationsDictionary[language] = translationObject;
-        this.changeHandlers.forEach((callback) => callback());
+        this.changeHandlers.forEach((callback) => callback(language));
     }
 
     resolveTranslationObject(language) {
